@@ -1,121 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Посмотри в окно</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/preloader.css" />
-    <link rel="stylesheet" href="./styles/error.css" />
-  </head>
-  <body class="page">
-    <main class="content">
-      <section class="result">
-        <div class="result__video-container">
-          <video src="" controls class="result__video" poster=""></video>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья: Что такое CSS-фреймворки? | Алексей Смирнов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+</head>
+<body>
+    <!-- ШАПКА САЙТА -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">Алексей Смирнов</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="article.html" class="nav-link active">Статья</a></li>
+                </ul>
+            </nav>
         </div>
-        <form class="search-form">
-          <fieldset class="search-form__fieldset">
-            <h2 class="search-form__fieldset-title">Город</h2>
-            <label class="search-form__label">
-              <span class="search-form__label-text visually-hidden">Город</span>
-              <input
-                type="text"
-                placeholder="Санкт Петербург, например"
-                name="city"
-                class="search-form__textfield"
-              />
-            </label>
-          </fieldset>
-          <fieldset class="search-form__fieldset">
-            <h2 class="search-form__fieldset-title">Время суток</h2>
-            <div class="search-form__checkbox-list">
-              <label class="search-form__label">
-                <input
-                  type="checkbox"
-                  name="time"
-                  value="morning"
-                  class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">Утро</span>
-              </label>
-              <label class="search-form__label">
-                <input
-                  type="checkbox"
-                  name="time"
-                  value="afternoon"
-                  class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">День</span>
-              </label>
-              <label class="search-form__label">
-                <input
-                  type="checkbox"
-                  name="time"
-                  value="night"
-                  class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">Ночь</span>
-              </label>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="main-content">
+        <article class="card">
+            <div class="article-meta">
+                Тема: <strong>Веб-разработка</strong> | Дата: <strong>15 марта 2025</strong> | Автор: <strong>Алексей Смирнов</strong>
             </div>
-          </fieldset>
-          <button type="submit" class="button search-form__submit-button">
-            Найти
-          </button>
-        </form>
-      </section>
-      <section class="content__details">
-        <h1 class="title">
-          <span class="content__accent">По-</span><br />смотри<br />в окно
-        </h1>
-        <div class="content__list-container">
-          <ul class="content__list">
-            <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
-          </ul>
-        </div>
-      </section>
+            
+            <h1>CSS-фреймворки: Ускорение и стандартизация вёрстки</h1>
+            
+            <p>В современной веб-разработке скорость и эффективность имеют ключевое значение. Одним из инструментов, который помогает разработчикам создавать интерфейсы быстрее и качественнее, являются <strong>CSS-фреймворки</strong>.</p>
+            
+            <h2>Что такое CSS-фреймворк?</h2>
+            <p>CSS-фреймворк — это готовый набор стилей, компонентов и утилитных классов, который предоставляет разработчику основу для создания пользовательских интерфейсов. Вместо того чтобы писать каждый стиль с нуля, вы используете предопределённые классы для разметки, кнопок, форм и других элементов.</p>
+            
+            <h2>Популярные примеры</h2>
+            <ul>
+                <li><strong>Bootstrap</strong> — самый известный фреймворк с огромным сообществом.</li>
+                <li><strong>Tailwind CSS</strong> — utility-first фреймворк, набирающий популярность.</li>
+                <li><strong>Bulma</strong> — современный фреймворк, основанный на Flexbox.</li>
+            </ul>
+            
+            <h2>Преимущества использования</h2>
+            <p>1. <strong>Скорость разработки</strong>: Готовые компоненты экономят время.<br>
+            2. <strong>Адаптивность</strong>: Большинство фреймворков изначально responsive.<br>
+            3. <strong>Стандартизация</strong>: Единый стиль для всех элементов проекта.<br>
+            4. <strong>Кроссбраузерность</strong>: Проблемы совместимости уже решены.</p>
+            
+            <h2>Небольшой пример кода с Bootstrap</h2>
+            <p>Вот как выглядит создание карточки с использованием классов Bootstrap:</p>
+            
+            <div class="code-block">
+<span class="code-comment">&lt;!-- Карточка, созданная с помощью классов Bootstrap --&gt;</span><br>
+&lt;div <span class="code-keyword">class=</span><span class="code-function">"card"</span> style=<span class="code-function">"width: 18rem;"</span>&gt;<br>
+&nbsp;&nbsp;&lt;img <span class="code-keyword">class=</span><span class="code-function">"card-img-top"</span> src=<span class="code-function">"..."</span> alt=<span class="code-function">"Изображение"</span>&gt;<br>
+&nbsp;&nbsp;&lt;div <span class="code-keyword">class=</span><span class="code-function">"card-body"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5 <span class="code-keyword">class=</span><span class="code-function">"card-title"</span>&gt;Заголовок карточки&lt;/h5&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p <span class="code-keyword">class=</span><span class="code-function">"card-text"</span>&gt;Текст карточки.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="code-keyword">href=</span><span class="code-function">"#"</span> <span class="code-keyword">class=</span><span class="code-function">"btn btn-primary"</span>&gt;Перейти куда-нибудь&lt;/a&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;
+            </div>
+            
+            <p>Как видно из примера, для создания сложного компонента не потребовалось писать ни строчки собственного CSS — всё уже предоставлено фреймворком.</p>
+            
+            <h2>Вывод</h2>
+            <p>CSS-фреймворки — это мощный инструмент в руках веб-разработчика. Они не заменяют глубокого знания HTML и CSS, но значительно упрощают и ускоряют процесс создания интерфейсов, особенно на начальных этапах проекта или при работе в команде.</p>
+            
+            <a href="index.html" class="back-link">← Вернуться на главную страницу</a>
+        </article>
     </main>
 
-    <!-- ТЕМПЛЕЙТЫ -->
-
-    <template class="preloader-template">
-      <div class="preloader">
-        <div class="preloader-chasing-squares">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+    <!-- ПОДВАЛ САЙТА -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright">© 2025 Личный сайт студента</p>
+            <p class="footer-quote">«Технологии должны улучшать жизнь, а не усложнять её.»</p>
         </div>
-      </div>
-    </template>
-
-    <template class="cards-list-item-template">
-      <li class="content__list-item">
-        <a href="#0" class="content__card-link">
-          <article class="content__video-card">
-            <div class="content__video-card-description-container">
-              <h2 class="content__video-card-title"></h2>
-              <p class="content__video-card-description"></p>
-            </div>
-            <img src="" alt="" class="content__video-card-thumbnail" />
-          </article>
-        </a>
-      </li>
-    </template>
-    <template class="more-button-template">
-      <button class="button more-button">Показать еще</button>
-    </template>
-
-    <template class="error-template">
-      <div class="error">
-        <h2 class="error__title">Из этого города нет видео :(</h2>
-      </div>
-    </template>
-    <script src="./scripts/script.js"></script>
-  </body>
+    </footer>
+</body>
 </html>
